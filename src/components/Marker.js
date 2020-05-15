@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { MarkerContext } from '../context/MarkerState';
 
 export const Marker = () => {
-    const { markers } = useContext(GlobalContext);
+    const { markers } = useContext(MarkerContext);
 
     return (
         <>
-            <ul className="beats">
-                { markers.map((mark, index) => (<li key={index} selected={mark.selected}></li>))}
+            <ul className="markers">
+                { markers.map((marker, index) => <li key={index}></li>)}
             </ul>
         </>
     );

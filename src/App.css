@@ -9,6 +9,33 @@ body,html {
   font-family: sans-serif;
 }
 
+.app-header {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > form {
+  display: flex;
+  align-self: center;
+}
+
+nav > form > label {
+  display: flex;
+  align-self: center;
+  margin-right: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-self: center;
+  margin-right: 2rem;
+}
+
 #play, #stop {
   border: .4rem solid black;
   border-radius: .5rem;
@@ -25,7 +52,7 @@ body,html {
 }
 
 .key-list {
-  margin: 0;
+  margin: 4rem 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -40,9 +67,8 @@ body,html {
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
-  padding: .5rem .5rem;
+  padding: 1.5rem;
   transition: all .07s ease;
-  width: 5rem;
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
@@ -56,18 +82,26 @@ body,html {
 }
 
 .track-list > li { 
-  border: solid rgb(110, 110, 110);
+  border-left: .5rem solid rgb(110, 110, 110);
+  border-right: .5rem solid rgb(110, 110, 110);
+  border-bottom: 1rem solid rgb(110, 110, 110);
 }
 
-/* .markers > li {
-  padding: 2rem;
-  border: solid 1px;
-  width: 2rem;
-  height: 2rem;
-} */
+.track-list > li:first-child {
+  border-top: .5rem solid rgb(110, 110, 110);
+}
 
-.beats, .markers {
-  margin: 0;
+.beats {
+  margin: 2rem 0;
+  padding: 0;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.markers {
+  margin: 3rem 0;
   padding: 0;
   display: flex;
   flex: 1;

@@ -13,7 +13,7 @@ export const KeyPad = () => {
     return (
         <>
             <ul className="key-list">
-                { tracks.map((track, index) => (<li data-key={track.datakey} key={index} className="key">{track.keyboardKey} {track.soundName}</li>)) }
+                { tracks.map((track, index) => (<li data-key={track.datakey} key={index} className="key"><span>{track.keyboardKey}</span> <span className="sound">{track.soundName}</span></li>)) }
             </ul>
 
             { tracks.map((track, index) => (<audio data-key={track.datakey} key={index} src={track.src}></audio>)) }

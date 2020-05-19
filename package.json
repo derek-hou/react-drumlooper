@@ -7,9 +7,16 @@
   "description": "React Drumloop Machine",
   "main": "index.js",
   "scripts": {
-    "prestart": "cd react-ui/ && npm install",
+    "prestart": "npm install",
     "start": "node ./server/index.js",
     "build": "cd react-ui/ && npm install && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "express": "^4.16.4"
   },
   "repository": {
     "type": "git",
